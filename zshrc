@@ -28,3 +28,9 @@ setopt HIST_NO_STORE
 unsetopt SINGLE_LINE_ZLE
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
+
+# mappings for Ctrl/Option-left-arrow and Ctrl/Option-right-arrow for word moving
+bindkey "\e\e[C"  forward-word
+bindkey "\e\e[D"  backward-word
+
+bindkey -e
