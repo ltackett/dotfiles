@@ -5,6 +5,14 @@ alias cdd='cd - ' # goto last dir cd'ed from
 alias grep='grep --color=auto'
 alias mkdir='mkdir -p' # mkdir should be recursive
 
+# Utility
+# ===========================
+
+alias clearassets="rm -rf tmp/cache && rm -rf tmp/sass-cache && touch tmp/restart.txt"
+alias jugs="$HOME/node_modules/juggernaut/server.js"
+alias ffs="foreman start"
+alias spec="bundle exec rake spec"
+
 # svn
 # ===========================
 
@@ -21,7 +29,7 @@ alias solve='svn resolved'
 # ===========================
 
 alias g='git'
-alias gist='g status'
+alias gist='g status -sb $argv; return 0'
 alias gull='g pull'
 alias gbase='g rebase'
 alias getch='g fetch'
