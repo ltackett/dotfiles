@@ -1,0 +1,6 @@
+# From Ben Hoskings' dotfiles
+# https://github.com/benhoskings/dot-files
+
+cd() {
+  builtin cd "$@" && ls
+}
