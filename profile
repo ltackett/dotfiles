@@ -13,7 +13,8 @@ umask 022
 # Path
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.bin:$PATH" # For dotfiles
+export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/local/node/bin:$PATH"
 
 # Fucking MySQL...
