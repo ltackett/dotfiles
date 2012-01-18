@@ -5,6 +5,9 @@ if [ -f $HOME/.profile ]; then
   source $HOME/.profile
 fi
 
+setopt prompt_subst
+setopt hist_ignore_dups
+
 . ~/.prompt
 . ~/.functions
 
