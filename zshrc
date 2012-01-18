@@ -5,7 +5,7 @@ if [ -f $HOME/.profile ]; then
   source $HOME/.profile
 fi
 
-/ ~/.prompt
+. ~/.prompt
 . ~/.functions
 
 # History
