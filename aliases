@@ -30,7 +30,7 @@ alias solve='svn resolved'
 
 alias g='git'
 alias gist='g status -sb $argv; return 0'
-alias gull='g pull'
+alias gull='g smart-pull'
 alias gbase='g rebase'
 alias getch='g fetch'
 alias gad='g add'
@@ -48,9 +48,15 @@ alias glog='g log --graph -B -M -C --find-copies-harder --decorate --source --pr
 alias glogme='g log --graph -B -M -C --find-copies-harder --decorate --source --pretty=medium --author=ltackett --left-right --all | subl'
 alias glogvim='g log --find-copies-harder --decorate --source --abbrev-commit --date=relative --left-right --all | vim -'
 alias gtfo='git diff --diff-filter=D --name-only -z | xargs -0 git rm'
+alias gadgin='gad . && gin'
+
+# `gack`, fast branching + tracking
+gack() {
+  git push origin origin:refs/heads/"$1" && git fetch origin && git checkout --track -b "$1" origin/"$1"
+}
 
 # `gush` by M. Dave Auayan ( http://github.com/sxtxixtxcxh )
-function gush {
+gush() {
   g push "$@"
   if [ $? = 0 ]; then
     { afplay $SUCCEED_SOUND & } 2>/dev/null
