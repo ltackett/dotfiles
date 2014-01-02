@@ -30,7 +30,7 @@ alias solve='svn resolved'
 
 alias g='git'
 alias gist='g status -sb $argv; return 0'
-alias gull='g smart-pull'
+alias gull='g pull'
 alias gbase='g rebase'
 alias getch='g fetch'
 alias gad='g add'
@@ -58,11 +58,16 @@ gack() {
 # `gush` by M. Dave Auayan ( http://github.com/sxtxixtxcxh )
 gush() {
   g push "$@"
-  if [ $? = 0 ]; then
-    { afplay $SUCCEED_SOUND & } 2>/dev/null
-    disown
-  else
-    { afplay $FAIL_SOUND & } 2>/dev/null
-    disown
+  if [ $PLAY_SOUNDS = 1 ]; then
+    if [ $? = 0 ]; then
+      { afplay $SUCCEED_SOUND & } 2>/dev/null
+      disown
+    else
+      { afplay $FAIL_SOUND & } 2>/dev/null
+      disown
+    fi
   fi
 }
+
+# List members in a group
+members () { dscl . -list /Users | while read user; do printf "$user "; dsmemberutil checkmembership -U "$user" -G "$*"; done | grep "is a member" | cut -d " " -f 1; };

@@ -4,6 +4,7 @@ if [[ $- != *i* ]] ; then
 fi
 
 # Sounds
+export PLAY_SOUNDS=1
 export SUCCEED_SOUND="$HOME/.succeed.mp3"
 export FAIL_SOUND="$HOME/.fail.mp3"
 
@@ -23,10 +24,10 @@ export PATH="$HOME/applications/airsdk/bin:$PATH" # For Adobe AIR
 # export PATH="/usr/local/bin:$PATH"
 
 # Fucking MySQL...
-# export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # Fucking Postgres...
-export PGDATA = /usr/local/var/postgres
+export PGDATA="/usr/local/var/postgres"
 
 . ~/.aliases
 
