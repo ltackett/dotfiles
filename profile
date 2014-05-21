@@ -17,6 +17,7 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH="$HOME/.bin:$PATH" # For dotfiles
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/dev/android-sdk/sdk/tools:$PATH" # For Android
+export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH" # For Postgres App
 
 # Fucking Adobe Air...
 export PATH="$HOME/applications/airsdk/bin:$PATH" # For Adobe AIR
@@ -29,6 +30,12 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # Fucking Postgres...
 export PGDATA="/usr/local/var/postgres"
+
+# Fucking Cocos2D-X
+export ANT_ROOT=$HOME/dev/apache-ant/bin
+export JAVA_HOME=$(/usr/libexec/java_home)
+export COCOS_CONSOLE_ROOT=$HOME/dev/cocos2d-js/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 . ~/.aliases
 

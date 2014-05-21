@@ -34,4 +34,8 @@ bindkey "\e\e[C"  forward-word
 bindkey "\e\e[D"  backward-word
 
 bindkey -e
+
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
