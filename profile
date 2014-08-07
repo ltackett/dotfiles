@@ -31,12 +31,6 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 # Fucking Postgres...
 export PGDATA="/usr/local/var/postgres"
 
-# Fucking Cocos2D-X
-export ANT_ROOT=$HOME/dev/apache-ant/bin
-export JAVA_HOME=$(/usr/libexec/java_home)
-export COCOS_CONSOLE_ROOT=$HOME/dev/cocos2d-js/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
 . ~/.aliases
 
 [[ -e "$HOME/.private" ]] && source "$HOME/.private"
