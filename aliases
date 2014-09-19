@@ -8,6 +8,7 @@ alias mkdir='mkdir -p' # mkdir should be recursive
 # Utility
 # ===========================
 
+alias iossimulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 alias clearassets="rm -rf tmp/cache && rm -rf tmp/sass-cache && touch tmp/restart.txt"
 alias jugs="$HOME/node_modules/juggernaut/server.js"
 alias ffs="foreman start"
