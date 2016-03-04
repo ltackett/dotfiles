@@ -31,6 +31,15 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 # Fucking Postgres...
 export PGDATA="/usr/local/var/postgres"
 
+# Fucking Docker...
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Users/ltackett/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
+
+# Fucking git
+autoload -Uz compinit && compinit
+
 . ~/.aliases
 
 [[ -e "$HOME/.private" ]] && source "$HOME/.private"
