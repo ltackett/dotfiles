@@ -14,6 +14,11 @@ alias jugs="$HOME/node_modules/juggernaut/server.js"
 alias ffs="foreman start"
 alias spec="bundle exec rake spec"
 
+# Python
+# ===========================
+alias virtualenv="python3 -m virtualenv"
+
+
 # svn
 # ===========================
 

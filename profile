@@ -18,6 +18,7 @@ export PATH="$HOME/.bin:$PATH" # For dotfiles
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/dev/android-sdk/sdk/tools:$PATH" # For Android
 export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH" # For Postgres App
+export PATH="$HOME/.composer/vendor/bin:$PATH" # For Composer
 
 # Fucking Adobe Air...
 export PATH="$HOME/applications/airsdk/bin:$PATH" # For Adobe AIR
@@ -38,7 +39,7 @@ export DOCKER_CERT_PATH="/Users/ltackett/.docker/machine/machines/default"
 export DOCKER_MACHINE_NAME="default"
 
 # Fucking git
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 
 . ~/.aliases
 
